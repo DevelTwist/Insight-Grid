@@ -1,0 +1,10 @@
+{
+  "name": "Insight Grid",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.0",
+    "sass": "^1.22.12"
+  }
+}

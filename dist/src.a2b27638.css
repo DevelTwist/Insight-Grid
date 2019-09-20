@@ -1,0 +1,181 @@
+.container {
+  padding: 2%;
+  font-family: 'Open Sans',sans-serif; }
+
+body {
+  background: #eee; }
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "first__grid" "second__grid"; }
+
+.first__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". .";
+  grid-area: first__grid;
+  grid-gap: 15px;
+  margin-bottom: 30px; }
+  @media screen and (max-width: 768px) {
+    .first__grid {
+      display: block; } }
+  @media screen and (min-width: 769px) and (max-width: 1240px) {
+    .first__grid .box__title h2 {
+      font-size: 18px; }
+    .first__grid .box__tag span {
+      font-size: 16px; }
+    .first__grid .box__link a {
+      margin: 0;
+      font-size: 16px; } }
+
+.second__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: ". . ." ". . .";
+  grid-area: second__grid;
+  grid-gap: 15px; }
+  @media screen and (min-width: 769px) and (max-width: 1100px) {
+    .second__grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: ". . " ". ."; } }
+  @media screen and (max-width: 768px) {
+    .second__grid {
+      display: block; } }
+
+.box {
+  display: grid;
+  grid-template-columns: 0.2fr 0.1fr 1fr;
+  grid-template-rows: 250px 130px 90px;
+  grid-template-areas: ". . ." ". . ." ". . ."; }
+  .box__figure {
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3; }
+  .box__content {
+    position: relative;
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background: #fff;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr; }
+  .box__image {
+    transition: 2s;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center; }
+  .box__tag {
+    padding: 35px 30px 0px; }
+    .box__tag span {
+      background: #F17467;
+      color: white;
+      padding: 5px;
+      border-radius: 6px;
+      font-size: 18px; }
+  .box__title {
+    padding: 0px 30px; }
+  .box__link {
+    padding: 0px 30px; }
+    .box__link a {
+      position: relative;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: -.5px;
+      color: #000;
+      text-decoration: none;
+      margin: 0 30px; }
+      .box__link a:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 3px;
+        background-color: #F17467;
+        transition: .6s width linear; }
+      .box__link a:hover:after {
+        width: 100%; }
+  .box__bar {
+    width: 8px;
+    background-color: #F17467;
+    height: 0%;
+    position: absolute;
+    bottom: 0;
+    transition: height 300ms; }
+  .box__icon {
+    display: none; }
+  .box:hover .box__bar {
+    height: 100%; }
+  .box:hover .box__icon {
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: -80px;
+    animation: fade-in 600ms both; }
+  @media screen and (min-width: 769px) and (max-width: 1250px) {
+    .box__title h2 {
+      font-size: 16px; }
+    .box__tag span {
+      font-size: 16px; }
+    .box__link a {
+      margin: 0;
+      font-size: 16px; } }
+  @media screen and (max-width: 768px) {
+    .box {
+      margin-bottom: 25px; }
+      .box__title h2 {
+        font-size: 18px; }
+      .box__tag span {
+        font-size: 16px; }
+      .box__link a {
+        margin: 0;
+        font-size: 16px; } }
+  @media screen and (max-width: 420px) {
+    .box {
+      margin-bottom: 25px; }
+      .box__title h2 {
+        font-size: 16px; }
+      .box__tag span {
+        font-size: 14px; }
+      .box__link a {
+        margin: 0;
+        font-size: 16px; } }
+
+.second__grid .box {
+  display: grid;
+  grid-template-columns: 0.2fr 0.1fr 1fr;
+  grid-template-rows: 100px 130px 70px;
+  grid-template-areas: ". . ." ". . ." ". . ."; }
+  .second__grid .box__title h2 {
+    font-size: 16px; }
+  .second__grid .box__tag span {
+    font-size: 16px; }
+  @media screen and (max-width: 768px) {
+    .second__grid .box {
+      margin: 25px 0; } }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+
+/*# sourceMappingURL=/src.a2b27638.css.map */
